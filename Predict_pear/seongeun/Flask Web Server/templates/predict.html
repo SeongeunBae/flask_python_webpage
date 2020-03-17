@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>AI</title>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- Bootstrap core CSS -->
+  <link href="{{url_for('static', filename='css/bootstrap.css')}}" rel="stylesheet">
+  <link href="{{url_for('static', filename='css/seoung.css')}}" rel="stylesheet">
+  <!-- 나눔 바른 고딕 웹 폰트 적용하기 -->
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/font-nanum/1.0/nanumbarungothic/nanumbarungothic.css">
+  <style type="text/css">
+
+    html,
+    body,
+    header,
+    .carousel {
+      height: 100%;
+    }
+    .hangul {
+        font-family: 'Nanum Barun Gothic' !important;
+    }
+    @media screen and (max-width: 990px) {
+	    .container-fluidd {
+	    	margin-top: 9rem;
+	    }
+    }
+    @media screen and (min-width: 990px) {
+	    .container-fluidd {
+	    	margin-top: 14rem;
+	    }
+    }
+    img { max-width: 100%; height: auto; }
+  </style>
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <div class="container-fluidd">
+	<!-- 네비바 -->
+	<nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top" style="border-bottom: solid;border-color: #b3b3b3;">
+
+			<div class="row w-100 no-gutters d-lg-flex d-flex flex-wrap">
+				<div class="brand"
+					style="margin-left: calc(50% - 4.25rem);">
+                    <div>
+                        <img src="{{url_for('static', filename='img/logo.PNG')}}" style="width: 7.25rem;float:left" alt="LOGO">
+
+                        <img src="{{url_for('static', filename='img/logo2.PNG')}}" style="width:9.25rem;float:left;margin-top: calc(50% - 2rem)" alt="LOGO">
+                    </div>
+                </div>
+
+				<button class="navbar-toggler collapsed float-right order-3"
+					type="button" data-toggle="collapse" data-target="#all-pages-176"
+					aria-controls="all-pages-176" aria-expanded="false"
+					aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div id="all-pages-176"	class="collapse navbar-collapse text-right order-4"	style="width: 100%;">
+					<ul class="navbar-nav">
+						<li class="nav-link"><a href={{ url_for('about') }} class="nav-link m-2">ABOUT</a></li>
+						<li class="nav-link">
+                             <a href="predict.html" class="nav-link m-2"><strong>
+                            PREDICT</strong></a></li>
+                        <li class="nav-link"><a href="https://github.com/SeongeunBae/predict-price-pythondeeplearnning"
+                                                class="nav-link m-2">LET'S GO GITHUB
+                            <i class="fa fa-graduation-cap ml-2"></i></a></li>
+					</ul>
+
+
+
+					<div class="dropdown d-inline-block">
+						<button class="btn btn-outline-dark dropdown-toggle" type="button"
+							id="dropdownMenuButton" data-toggle="dropdown"
+							aria-haspopup="true" aria-expanded="false">대한민국</button>
+						<div class="dropdown-menu w-100"
+							aria-labelledby="dropdownMenuButton">
+							<a class="dropdown-item" href="index.jsp">한글</a> <a
+								class="dropdown-item" href="../mooni.en/index.jsp">English</a>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</nav>
+    </div>
+  <!-- Navbar -->
+  <div class="container-fluidd" style="padding-top:1rem;margin-left:2rem;margin-right:2rem">
+
+        <div class="container" >
+            <h3 class="h3 text-center" style="font-family: 'Nanum Barun Gothic'">배의 미래 데이터 예측해보기</h3>
+            <div style="font-family: 'Nanum Barun Gothic';text-align: justify;font-size:18px;font-weight:500;margin-left:5rem;margin-top:1rem;margin-right:5rem;margin-bottom:3rem">
+            농산물 중 배 가격 예측만 구현하였습니다.<br>
+            미래 데이터를 예측하기 위해서는 예측하고 싶은 날짜의 이전 3일치 데이터가 필요합니다.
+            </div>
+        </div>
+
+            <form action="/" method="post">
+              <!-- Default form group -->
+
+                  <!-- Default input -->
+                <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3" style="text-align:center;float: left;">
+                    <div style="text-align:center;margin-bottom:1rem;font-size:20px;font-weight:bold">"3 DAYS AGO"</div>
+                    <div class="form-group">
+                      <label style="font-family: 'Nanum Barun Gothic'" for="formGroupExampleInput">평균 온도1</label>
+                      <input style="font-family: 'Nanum Barun Gothic'" type="text" name="mean1" class="form-control" id="formGroupExampleInput" placeholder="평균 온도를 입력하세요.">
+                  </div>
+                  <!-- Default input -->
+
+                  <div class="form-group">
+                      <label style="font-family: 'Nanum Barun Gothic'" for="formGroupExampleInput">강수량1</label>
+                      <input style="font-family: 'Nanum Barun Gothic'" type="text" name="prep1" class="form-control" id="formGroupExampleInput" placeholder="최소 온도를 입력하세요.">
+                  </div>
+                  <!-- Default input -->
+                  <div class="form-group">
+                      <label style="font-family: 'Nanum Barun Gothic'" for="formGroupExampleInput">습도1</label>
+                      <input style="font-family: 'Nanum Barun Gothic'" type="text" name="humidity1" class="form-control" id="formGroupExampleInput" placeholder="최대 온도를 입력하세요.">
+                  </div>
+                  <!-- Default input -->
+                  <div class="form-group">
+                      <label style="font-family: 'Nanum Barun Gothic'" for="formGroupExampleInput">도매가격1</label>
+                      <input style="font-family: 'Nanum Barun Gothic'" type="text" name="whole_price1" class="form-control" id="formGroupExampleInput" placeholder="강수량을 입력하세요.">
+                  </div>
+                  <div class="form-group">
+                      <label style="font-family: 'Nanum Barun Gothic'" for="formGroupExampleInput">소매가격1</label>
+                      <input style="font-family: 'Nanum Barun Gothic'" type="text" name="retail_price1" class="form-control" id="formGroupExampleInput" placeholder="강수량을 입력하세요.">
+                  </div>
+                </div>
+
+                <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3" style="text-align:center;float: left;">
+                <div style="text-align:center;margin-bottom:1rem;font-size:20px;font-weight:bold">"2 DAYS AGO"</div>
+                 <div class="form-group">
+                      <label style="font-family: 'Nanum Barun Gothic'" for="formGroupExampleInput">평균 온도2</label>
+                      <input style="font-family: 'Nanum Barun Gothic'" type="text" name="mean2" class="form-control" id="formGroupExampleInput" placeholder="평균 온도를 입력하세요.">
+                  </div>
+                  <!-- Default input -->
+                  <div class="form-group">
+                      <label style="font-family: 'Nanum Barun Gothic'" for="formGroupExampleInput">강수량2</label>
+                      <input style="font-family: 'Nanum Barun Gothic'" type="text" name="prep2" class="form-control" id="formGroupExampleInput" placeholder="최소 온도를 입력하세요.">
+                  </div>
+                  <!-- Default input -->
+                  <div class="form-group">
+                      <label style="font-family: 'Nanum Barun Gothic'" for="formGroupExampleInput">습도2</label>
+                      <input style="font-family: 'Nanum Barun Gothic'" type="text" name="humidity2" class="form-control" id="formGroupExampleInput" placeholder="최대 온도를 입력하세요.">
+                  </div>
+                  <!-- Default input -->
+                  <div class="form-group">
+                      <label style="font-family: 'Nanum Barun Gothic'" for="formGroupExampleInput">도매가격2</label>
+                      <input style="font-family: 'Nanum Barun Gothic'" type="text" name="whole_price2" class="form-control" id="formGroupExampleInput" placeholder="강수량을 입력하세요.">
+                  </div>
+                  <div class="form-group">
+                      <label style="font-family: 'Nanum Barun Gothic'" for="formGroupExampleInput">소매가격2</label>
+                      <input style="font-family: 'Nanum Barun Gothic'" type="text" name="retail_price2" class="form-control" id="formGroupExampleInput" placeholder="강수량을 입력하세요.">
+                  </div>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3" style="text-align:center;float: left;">
+                    <div style="text-align:center;margin-bottom:1rem;font-size:20px;font-weight:bold">"1 DAYS AGO"</div>
+              <div class="form-group">
+                      <label style="font-family: 'Nanum Barun Gothic'" for="formGroupExampleInput">평균 온도3</label>
+                      <input style="font-family: 'Nanum Barun Gothic'" type="text" name="mean3" class="form-control" id="formGroupExampleInput" placeholder="평균 온도를 입력하세요.">
+                  </div>
+                  <!-- Default input -->
+                  <div class="form-group">
+                      <label style="font-family: 'Nanum Barun Gothic'" for="formGroupExampleInput">강수량3</label>
+                      <input style="font-family: 'Nanum Barun Gothic'" type="text" name="prep3" class="form-control" id="formGroupExampleInput" placeholder="최소 온도를 입력하세요.">
+                  </div>
+                  <!-- Default input -->
+                  <div class="form-group">
+                      <label style="font-family: 'Nanum Barun Gothic'" for="formGroupExampleInput">습도3</label>
+                      <input style="font-family: 'Nanum Barun Gothic'" type="text" name="humidity3" class="form-control" id="formGroupExampleInput" placeholder="최대 온도를 입력하세요.">
+                  </div>
+                  <!-- Default input -->
+                  <div class="form-group">
+                      <label style="font-family: 'Nanum Barun Gothic'" for="formGroupExampleInput">도매가격3</label>
+                      <input style="font-family: 'Nanum Barun Gothic'" type="text" name="whole_price3" class="form-control" id="formGroupExampleInput" placeholder="강수량을 입력하세요.">
+                  </div>
+                  <div class="form-group">
+                      <label style="font-family: 'Nanum Barun Gothic'" for="formGroupExampleInput">소매가격3</label>
+                      <input style="font-family: 'Nanum Barun Gothic'" type="text" name="retail_price3" class="form-control" id="formGroupExampleInput" placeholder="강수량을 입력하세요.">
+                  </div>
+                    <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3" style="text-align:center;float: left;">
+                        <button style="font-family: 'Nanum Barun Gothic' !important;" type="submit" class="btn btn-dark btn-md pull-right">예측하기</button>
+                    </div>
+                </div>
+            </form>
+
+
+            <p class="h5 text-center mb-4" style="font-family: 'Nanum Barun Gothic';color:red">예측 결과</p>
+            {% if price %}
+              <h5 class="text-center mt-3">예측된 가격은 {{ price }}원입니다.</h5>
+            {% endif %}
+
+    </div>
+
+  <!-- SCRIPTS -->
+  <!-- JQuery -->
+  <script type="text/javascript" src="{{url_for('static', filename='js/jquery-3.3.1.min.js')}}"></script>
+  <!-- Bootstrap tooltips -->
+  <script type="text/javascript" src="{{url_for('static', filename='js/popper.min.js')}}"></script>
+  <!-- Bootstrap core JavaScript -->
+  <script type="text/javascript" src="{{url_for('static', filename='js/bootstrap.js')}}"></script>
+  <!-- MDB core JavaScript -->
+  <script type="text/javascript" src="{{url_for('static', filename='js/mdb.min.js')}}"></script>
+  <!-- Initializations -->
+  <script type="text/javascript">
+    // Animations initialization
+    new WOW().init();
+  </script>
+</body>
+
+</html>

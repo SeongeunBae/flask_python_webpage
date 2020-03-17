@@ -1,0 +1,340 @@
+@media screen and (max-width: 990px) {
+	/* 네비바에서 sns 한줄로 하기위해서  */
+	.navbar-nav .nav-item {
+		display: none;
+	}
+	/* 네비바고정으로 body 먹힘 방지하기 위해 */
+	.container-fluidd {
+		margin-top: 4rem;
+	}
+}
+
+@media screen and (min-width: 990px) {
+	/* 네비바에서 sns 한줄로 하기위해서  */
+	.hid {
+		display: none;
+	}
+	.container-fluidd {
+		margin-top: 9rem;
+	}
+}
+
+/* 음영효과css */
+.snip1273 {
+  font-family: 'Montserrat','NanumSquare', 'Nanum Gothic', sans-serif;
+  position: relative;
+  /* margin: 10px; */
+  min-width: 310px -60px;
+  max-width: 100%;
+  width: 100%;
+  color: #000000;
+  text-align: center;
+  background-color: #ffffff;
+  font-size: 16px;
+}
+/* .snip1273 * {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all 0.4s ease-in;
+  transition: all 0.4s ease-in;
+} */
+.snip1273 img {
+  position: relative;
+  max-width: 100%;
+  vertical-align: top;
+}
+.snip1273 figcaption {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  opacity: 0;
+  padding: 20px 30px;
+  
+}
+.snip1273 figcaption:before,
+.snip1273 figcaption:after {
+  width: 1px;
+  height: 0;
+}
+.snip1273 figcaption:before {
+  right: 0;
+  top: 0;
+}
+.snip1273 figcaption:after {
+  left: 0;
+  bottom: 0;
+}
+.snip1273 h3,
+.snip1273 p {
+  line-height: 1.5em;
+  
+}
+.snip1273 h3 {
+  margin: 0px;
+  font-weight: 700;
+  pont-size: 7vw;
+  position : absolute;
+  top:42%;
+  left:50%;
+  transform: translate(-50%, -50%);
+  font-family: 'Montserrat Alternates', 'NanumSquare', 'Nanum Gothic', sans-serif;
+}
+.snip1273 p {
+  font-size: 2.7vw;
+  font-weight: 800;
+  margin: 0 0 15px;
+  position : absolute;
+  top:58%;
+  left:50%;
+  transform: translate(-50%, -50%);
+  font-family: 'Montserrat','NanumSquare', 'Nanum Gothic', sans-serif;
+  letter-spacing :2.5px;
+}
+.snip1273 a {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 1;
+}
+/* .snip1273:before,
+.snip1273:after,
+.snip1273 figcaption:before,
+.snip1273 figcaption:after {
+  position: absolute;
+  content: '';
+  background-color: #ffffff;
+  z-index: 1;
+  -webkit-transition: all 0.4s ease-in;
+  transition: all 0.4s ease-in;
+  opacity: 1;
+} 
+.snip1273:before,
+.snip1273:after {
+  height: 1px;
+  width: 0%;
+} 
+.snip1273:before {
+  top: 0;
+  left: 0;
+}
+.snip1273:after {
+  bottom: 0;
+  right: 0;
+}*/
+.snip1273:hover img,
+.snip1273.hover img {
+  opacity: 0.2;
+}
+.snip1273:hover figcaption,
+.snip1273.hover figcaption {
+  opacity: 1;
+}
+.snip1273:hover figcaption:before,
+.snip1273.hover figcaption:before,
+.snip1273:hover figcaption:after,
+.snip1273.hover figcaption:after {
+  height: 100%;
+}
+.snip1273:hover:before,
+.snip1273.hover:before,
+.snip1273:hover:after,
+.snip1273.hover:after {
+  width: 100%;
+}
+.snip1273:hover:before,
+.snip1273.hover:before,
+.snip1273:hover:after,
+.snip1273.hover:after,
+.snip1273:hover figcaption:before,
+.snip1273.hover figcaption:before,
+.snip1273:hover figcaption:after,
+.snip1273.hover figcaption:after {
+  opacity: 1;
+}
+
+
+.pt-4, .py-4 {
+    padding-left:0rem !important;
+}
+
+.detail-button {
+	position: absolute;
+    top: 86%;
+    left: 18.5%;
+}
+.detail-button-m{
+	position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+/* .detail-button-c{
+	position: absolute;
+    right: 0;
+    bottom: 0;
+    
+  	padding-right: 40px;
+  	padding-left: 40px;
+  	margin-right: auto;
+  	margin-left: auto;
+} */
+@media (min-width: 576px) {
+  .detail-button-c {
+        padding-right: 18px;
+  }
+}
+
+@media (min-width: 768px) {
+  .detail-button-c {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+  .detail-button-c {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .detail-button-c {
+    max-width: 1000px;
+  }
+}
+.detail-button2 {
+	position: absolute;
+    top: 66%;
+    left: 45.5%;
+}
+.detail-button2-m{
+	position: absolute;
+    right:0rem;
+    bottom:0rem;
+}
+.themeBtn3 {
+    background: #ff3333;
+    color: #ffffff !important;
+    font-size: 1rem;
+    font-weight: 500;
+    height: 3vw;
+    line-height: 0.8;
+    padding: 10px 23px;
+    text-transform: capitalize;
+    letter-spacing: 0.5px;
+	cursor:pointer;
+}
+.themeBtn3:hover {
+    background: #d10b0b;
+    color: #ffffff;
+	text-decoration: none;
+}
+.themeBtn3:active {
+    background: #d10b0b;
+    color: #ffffff;
+}
+.themeBtn32 {
+    background: #ff3333;
+    color: #ffffff !important;
+    font-size: 1vw;
+    font-weight: 500;
+    height: 2.5vw;
+    width:9vw;
+    line-height: 0.8;
+    padding-top: 0.75vw;
+    text-transform: capitalize;
+    border-radius: 1px;
+    letter-spacing: 0.5px;
+	/* border:0px !important; */
+	cursor:pointer;
+	border: 1px solid;
+}
+.themeBtn32:hover {
+    background: #d10b0b;
+    color: #ffffff;
+	text-decoration: none;
+}
+.themeBtn32:active {
+    background: #d10b0b;
+    color: #ffffff;
+}
+.themeBtn32-m {
+    width:60px;
+    height:60px;
+    background: #ff3333;
+}
+.themeBtn32-m:hover {
+    background: #d10b0b;
+    color: #ffffff;
+	text-decoration: none;
+}
+.themeBtn32-m:active {
+    background: #d10b0b;
+    color: #ffffff;
+}
+@media screen and (max-width: 700px) { 
+	.detail-button{ 
+	display:none;
+	} 
+	.detail-button2{ 
+	display:none;
+	} 
+	.snip1273 figcaption{display:none;}
+	
+	.snip1273:hover img,
+	.snip1273.hover img {opacity: 1;}
+}
+@media screen and (min-width: 700px) { 
+	.detail-button-m{ 
+	display:none;
+	} 
+	/* .detail-button2-m{ 
+	display:none;
+	}  */
+	
+}
+.navbar-nav .nav-link {
+	color:#333333;
+	font-weight:400;
+
+}
+.navbar-nav .nav-link:hover, .nav-link:focus {
+	color:#00000;
+	#font-weight:600;
+	text-decoration: solid;
+}
+@media screen and (min-width: 991px) { 
+	.navbar-nav{margin-left: calc(50% - 125px);}
+}
+@media screen and (max-width: 530px) { 
+	.pp{ 
+	display:none;
+}
+}
+@media screen and (min-width: 530px) { 
+	.ppp{ 
+	display:none;
+}
+}
+.card-title{
+	color:#ffffff;
+	background-color:#ff3333;
+	padding-top:0.4rem;
+	padding-bottom:0.4rem
+}
+.card-title:link{
+	color:#ffffff;
+	background-color:#ff3333;
+}
+.card-title:hover{
+	color:#ffffff;
+	background-color:#d10b0b
+}
+.card-title:active{
+	color:#ffffff;
+	background-color:#d10b0b
+}

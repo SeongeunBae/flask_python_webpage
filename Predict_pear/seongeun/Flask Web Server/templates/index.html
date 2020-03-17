@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>AI</title>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- Bootstrap core CSS -->
+  <link href="{{url_for('static', filename='css/bootstrap.css')}}" rel="stylesheet">
+  <link href="{{url_for('static', filename='css/seoung.css')}}" rel="stylesheet">
+  <!-- 나눔 바른 고딕 웹 폰트 적용하기 -->
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/font-nanum/1.0/nanumbarungothic/nanumbarungothic.css">
+  <style type="text/css">
+
+    html,
+    body,
+    header,
+    .carousel {
+      height: 100%;
+    }
+    .hangul {
+        font-family: 'Nanum Barun Gothic' !important;
+    }
+    @media screen and (max-width: 990px) {
+	    .container-fluidd {
+	    	margin-top: 9rem;
+	    	margin-left:2rem;
+	    	margin-right:2rem;
+	    }
+    }
+    @media screen and (min-width: 990px) {
+	    .container-fluidd {
+	    	margin-top: 14rem;
+	    	margin-left:2rem;
+	    	margin-right:2rem;
+	    }
+    }
+    img { max-width: 100%; height: auto; }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <div class="container-fluidd">
+	<!-- 네비바 -->
+	<nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top" style="border-bottom: solid;border-color: #b3b3b3;">
+
+			<div class="row w-100 no-gutters d-lg-flex d-flex flex-wrap">
+				<div class="brand"
+					style="margin-left: calc(50% - 4.25rem);">
+                    <div>
+                        <img src="{{url_for('static', filename='img/logo.PNG')}}" style="width: 7.25rem;float:left" alt="LOGO">
+
+                        <img src="{{url_for('static', filename='img/logo2.PNG')}}" style="width:9.25rem;float:left;margin-top: calc(50% - 2rem)" alt="LOGO">
+                    </div>
+                </div>
+
+				<button class="navbar-toggler collapsed float-right order-3"
+					type="button" data-toggle="collapse" data-target="#all-pages-176"
+					aria-controls="all-pages-176" aria-expanded="false"
+					aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div id="all-pages-176"	class="collapse navbar-collapse text-right order-4"	style="width: 100%;">
+					<ul class="navbar-nav">
+						<li class="nav-link"><a href="about.html" class="nav-link m-2"><strong>ABOUT</strong></a></li>
+						<li class="nav-link">
+                             <a href={{ url_for('predict') }} class="nav-link m-2">
+                            PREDICT</a></li>
+                        <li class="nav-link"><a target="_blank" href="https://github.com/SeongeunBae/predict-price-pythondeeplearnning"
+                                                class="nav-link m-2">LET'S GO GITHUB
+                            <i class="fa fa-graduation-cap ml-2"></i></a></li>
+
+
+					</ul>
+
+
+
+					<div class="dropdown d-inline-block">
+						<button class="btn btn-outline-dark dropdown-toggle" type="button"
+							id="dropdownMenuButton" data-toggle="dropdown"
+							aria-haspopup="true" aria-expanded="false">대한민국</button>
+						<div class="dropdown-menu w-100"
+							aria-labelledby="dropdownMenuButton">
+							<a class="dropdown-item" href="index.jsp">한글</a> <a
+								class="dropdown-item" href="../mooni.en/index.jsp">English</a>
+						</div>
+					</div>
+
+
+				</div>
+			</div>
+
+		</nav>
+    </div>
+  <!-- Navbar -->
+  <div class="container-fluidd" style="padding-top:1rem" >
+
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="text-align:center;float: left;">
+                    <!--<div style="font-size:1.5rem;font-weight:bold;padding-bottom:2rem;"><strong>Q.</strong> 농산물 가격 예측이 필요한 이유?
+                    <img src="{{url_for('static', filename='img/main1.PNG')}}" style="width: 30rem;margin-top:2rem;padding-bottom:2rem;" alt="">
+                    <div style="font-size:1rem;padding-bottom:2rem;">
+                    농산물 가격 예측을 한다면 <br>모든 이해관계자가 생산, 소비, 유통 등 의사결정을 할때<br>
+                        이를 지원하는 역할을 할 수 있으며, 수요자가 원하는 핵심 정보를 제공할 수 있다.<br>
+                    수요자는 미리 가격이 낮을 때 구매할 수 있으며, 공급자는 가격이 높을때 팔 수 있다.</div>
+                    </div>-->
+                    <img src="{{url_for('static', filename='img/main6.jpg')}}" style="margin-bottom:7rem">
+
+                </div>
+               <!-- <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6" style="text-align:center;float: left;margin-bottom:7rem">
+                    &lt;!&ndash;div style="font-size:1.5rem;font-weight:bold;padding-bottom:2rem;">서울 토마토 가격 예측 AI 로봇</div>
+                    <img src="{{url_for('static', filename='img/main2.PNG')}}" style="width: 30rem;" alt="">
+                    <div style="font-size:1rem;padding-bottom:2rem;">
+                    빠르고 정확하게 향후 배추 가격을 예측합니다.
+                     <br>기상청 전국 기온 및 강수량 데이터와 전국 월별 토마토 가격 빅 데이터를 분석하여 시계열 수치 예측을 수행합니다.
+                &ndash;&gt;
+                    <img src="{{url_for('static', filename='img/main3.PNG')}}" style="float:left" alt="LOGO">
+                </div>-->
+                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6" style="text-align:center;float: left;">
+                    <img src="{{url_for('static', filename='img/main4.jpg')}}" style="float:left" alt="LOGO">
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6" style="text-align:center;float: left;margin-bottom:7rem">
+                    <img src="{{url_for('static', filename='img/main2.PNG')}}" style="float:left" alt="LOGO">
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6" style="text-align:center;float: left;">
+                    <img src="{{url_for('static', filename='img/main5.jpg')}}" style="float:left" alt="LOGO">
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6" style="text-align:center;float: left;">
+                    <h3 class="h3 mb-3" style="font-family: 'Nanum Barun Gothic'">배의 가격 예측 결과</h3>
+            <p style="font-family: 'Nanum Barun Gothic';text-align: justify;font-size:18px;font-weight:500;margin-left:5rem;margin-right:5rem;margin-top:2rem">
+                머신 러닝 선형 회귀(Linear Regression) 모델을 확장하여 시계열에 따른 배 가격을 예측해보았습니다.
+                <strong style="font-family: 'Nanum Barun Gothic'">미래</strong>의 배 가격을 효과적으로 예측할 수 있습니다. <br>
+            연구결과 이미지를 보면 정확도를 확인해볼 수 있습니다.</p>
+                     <a target="_blank" href="https://github.com/SeongeunBae/predict-price-pythondeeplearnning"
+              style="font-family: 'Nanum Barun Gothic';color:black;margin-top:3rem" class="btn btn-grey btn-md">전체 소스코드 다운로드
+              <i class="fa fa-download ml-1"></i>
+            </a>
+                </div>
+
+  </div>
+            <!-- Content -->
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+
+  <!-- SCRIPTS -->
+  <!-- JQuery -->
+  <script type="text/javascript" src="{{url_for('static', filename='js/jquery-3.3.1.min.js')}}"></script>
+  <!-- Bootstrap tooltips -->
+  <script type="text/javascript" src="{{url_for('static', filename='js/popper.min.js')}}"></script>
+  <!-- Bootstrap core JavaScript -->
+  <script type="text/javascript" src="{{url_for('static', filename='js/bootstrap.js')}}"></script>
+  <!-- MDB core JavaScript -->
+  <script type="text/javascript" src="{{url_for('static', filename='js/mdb.min.js')}}"></script>
+  <!-- Initializations -->
+  <script type="text/javascript">
+    // Animations initialization
+    new WOW().init();
+  </script>
+</body>
+
+</html>
